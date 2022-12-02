@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{7018df58-28d0-4faa-8cfc-89bf18f88cf8}">
+		<property name="name">
+			<value>Corrupted</value>
+		</property>
+		<relationship name="folder">
+			<destination>{db19b2d7-defe-4f35-9e78-3722541276cc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c7e8c65e-0efe-4fad-ad19-4ab0f462c8a2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c7e8c65e-0efe-4fad-ad19-4ab0f462c8a2}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8dfe11e5-aa9e-47a6-9020-239323076e7d}">
+		<property name="assetPath">
+			<value>reapersesao_cozy_jam.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>18.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea86db25-dc90-4179-b520-f3ea1a26cbbf}</destination>
+		</relationship>
+	</object>
+</objects>

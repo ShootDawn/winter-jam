@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Runtime.ExceptionServices;
 
 public class Dialogue : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class Dialogue : MonoBehaviour
     public bool isBlurred = true;
     public bool hasGivenKey = false;
     public House House;
+    private FMOD.Studio.EventInstance voiceSFX;
 
     private int index;
     // Start is called before the first frame update
@@ -63,7 +65,8 @@ public class Dialogue : MonoBehaviour
         index = 0;
         if(isBlurred)
         {
-        StartCoroutine(TypeLineBlurred());
+            voiceSFX.setParameterByName("Corrupted", 1);
+            StartCoroutine(TypeLineBlurred());
         } else
         {
             if (!hasGivenKey)
@@ -71,7 +74,8 @@ public class Dialogue : MonoBehaviour
                 House.Keys++;
                 hasGivenKey = true;
             }
-        StartCoroutine(TypeLine());
+            voiceSFX.setParameterByName("Corrupted", 0);
+            StartCoroutine(TypeLine());
         }
     }
 
@@ -113,6 +117,10 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
+            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC1Talking");
+            voiceSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
+            voiceSFX.release();
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
@@ -121,6 +129,10 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in linesBlurred[index].ToCharArray())
         {
+            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC1Talking");
+            voiceSFX.start();
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
+            voiceSFX.release();
             textComponent.text += c;
             yield return new WaitForSeconds(0.01f);
         }
