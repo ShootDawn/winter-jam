@@ -18,6 +18,7 @@ public class Book : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.X))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Homeless/Pickup");
             npc.isBlurred = false;
             player.knowledge[language] = true;
             Destroy(gameObject);

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0088018f-694f-4e85-baca-7f12b41adc77}">
+		<property name="assetPath">
+			<value>PM_FEETHmn_footstep_snow_packed_crunchy_02_PMSFX_SSNI_2427.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.79200000000000004</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea86db25-dc90-4179-b520-f3ea1a26cbbf}</destination>
+		</relationship>
+	</object>
+</objects>

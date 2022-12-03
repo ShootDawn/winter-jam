@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
     public bool hasGivenKey = false;
     public House House;
     private FMOD.Studio.EventInstance voiceSFX;
+    public int npcNumber = 1;
 
     private int index;
     // Start is called before the first frame update
@@ -117,7 +118,7 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
-            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC1Talking");
+            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC" + npcNumber + "Talking");
             voiceSFX.start();
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
             voiceSFX.release();
@@ -129,7 +130,7 @@ public class Dialogue : MonoBehaviour
     {
         foreach (char c in linesBlurred[index].ToCharArray())
         {
-            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC1Talking");
+            voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC" + npcNumber + "Talking");
             voiceSFX.start();
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
             voiceSFX.release();

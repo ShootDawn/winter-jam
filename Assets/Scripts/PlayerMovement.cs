@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D playerRb;
     public bool[] knowledge = new bool[6];
+    public Animator animator;
 
     Vector2 movement;
     private void Start()
@@ -27,11 +28,15 @@ public class PlayerMovement : MonoBehaviour
         //Get arrow keys
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("xInput", movement.x);
+        animator.SetFloat("yInput", movement.y);
+        animator.SetFloat("speed", movement.sqrMagnitude);
     }
     void FixedUpdate()
     {
         //Move
-        playerRb.MovePosition(playerRb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        playerRb.MovePosition(playerRb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 
     
