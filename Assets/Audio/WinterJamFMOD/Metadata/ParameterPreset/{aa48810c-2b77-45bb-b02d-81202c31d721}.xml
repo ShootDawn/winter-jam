@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{aa48810c-2b77-45bb-b02d-81202c31d721}">
+		<property name="name">
+			<value>Coldness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{db19b2d7-defe-4f35-9e78-3722541276cc}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ee8235ca-e237-4c21-b976-44610fa79765}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ee8235ca-e237-4c21-b976-44610fa79765}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>21</value>
+		</property>
+	</object>
+</objects>

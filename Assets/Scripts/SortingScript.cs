@@ -17,6 +17,6 @@ public class SortingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myRenderer.sortingOrder = -(int)myTransform.position.y;
+       // myRenderer.sortingOrder = -(int)myTransform.position.y;
     }
 }

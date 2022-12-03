@@ -8,8 +8,9 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
+    public float textSpeed = 0.1f;
     public string[] linesBlurred;
-    public float textSpeed = 0.05f;
+    public float textSpeedBlurred = 0.01f;
     public GameObject dialogueBox;
     public bool inRange = false;
     public bool dialogue = false;
@@ -66,7 +67,6 @@ public class Dialogue : MonoBehaviour
         index = 0;
         if(isBlurred)
         {
-            voiceSFX.setParameterByName("Corrupted", 1);
             StartCoroutine(TypeLineBlurred());
         } else
         {
@@ -75,7 +75,6 @@ public class Dialogue : MonoBehaviour
                 House.Keys++;
                 hasGivenKey = true;
             }
-            voiceSFX.setParameterByName("Corrupted", 0);
             StartCoroutine(TypeLine());
         }
     }
@@ -119,6 +118,7 @@ public class Dialogue : MonoBehaviour
         foreach (char c in lines[index].ToCharArray())
         {
             voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC" + npcNumber + "Talking");
+            voiceSFX.setParameterByName("Corrupted", 0);
             voiceSFX.start();
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
             voiceSFX.release();
@@ -131,6 +131,7 @@ public class Dialogue : MonoBehaviour
         foreach (char c in linesBlurred[index].ToCharArray())
         {
             voiceSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/NPC/NPC" + npcNumber + "Talking");
+            voiceSFX.setParameterByName("Corrupted", 1);
             voiceSFX.start();
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(voiceSFX, gameObject.transform);
             voiceSFX.release();

@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public bool[] knowledge = new bool[6];
     public Animator animator;
 
+    public FMOD.Studio.EventInstance footstepsSFX;
+
     Vector2 movement;
     private void Start()
     {
@@ -32,12 +34,32 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("xInput", movement.x);
         animator.SetFloat("yInput", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
+
+
+        if (movement.sqrMagnitude > 0) {
+            if (!IsPlaying(footstepsSFX))
+            {
+                footstepsSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Homeless/Walk");
+                footstepsSFX.start();
+            }
+
+        } else
+        {
+            footstepsSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            footstepsSFX.release();
+        }
     }
     void FixedUpdate()
     {
         //Move
         playerRb.MovePosition(playerRb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
-
-    
+    bool IsPlaying(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
     }
+
+
+}

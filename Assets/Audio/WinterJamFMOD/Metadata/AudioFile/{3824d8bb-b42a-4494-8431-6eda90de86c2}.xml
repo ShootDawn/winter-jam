@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3824d8bb-b42a-4494-8431-6eda90de86c2}">
+		<property name="assetPath">
+			<value>Guy_NPC4_Corrupted_FX-002.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.32569791666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea86db25-dc90-4179-b520-f3ea1a26cbbf}</destination>
+		</relationship>
+	</object>
+</objects>

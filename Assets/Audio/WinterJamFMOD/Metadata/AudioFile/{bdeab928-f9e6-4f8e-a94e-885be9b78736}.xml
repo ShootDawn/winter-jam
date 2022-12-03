@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bdeab928-f9e6-4f8e-a94e-885be9b78736}">
+		<property name="assetPath">
+			<value>Guy_NPC4_Normal_FX.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.32569791666666664</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ea86db25-dc90-4179-b520-f3ea1a26cbbf}</destination>
+		</relationship>
+	</object>
+</objects>
