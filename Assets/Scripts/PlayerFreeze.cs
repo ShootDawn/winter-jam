@@ -9,10 +9,13 @@ public class PlayerFreeze : MonoBehaviour
     public float iceAlpha = 0;
     public SpriteRenderer ice;
     public int maxTime = 10;
+    private FMOD.Studio.EventInstance windSFX;
     // Start is called before the first frame update
     void Start()
     {
-        
+        windSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/LevelSFX/WindHumming");
+        windSFX.start();
+
     }
 
     // Update is called once per frame
@@ -24,8 +27,9 @@ public class PlayerFreeze : MonoBehaviour
                 ice.color = new Color(22, 31, 41, iceAlpha);
                 iceAlpha = freezeMeter / maxTime;
             freezeMeter += Time.deltaTime;
-            
-        } else
+                windSFX.setParameterByName("Coldness", freezeMeter*10);
+
+            } else
         {
             Debug.Log("you died!");
         }
@@ -35,10 +39,16 @@ public class PlayerFreeze : MonoBehaviour
             {
                 ice.color = new Color(22, 31, 41, iceAlpha);
                 iceAlpha = freezeMeter / maxTime;
-                freezeMeter -= Time.deltaTime;
+                freezeMeter -= Time.deltaTime*2;
+                windSFX.setParameterByName("Coldness", freezeMeter*5);
             }
         }
 
+    }
+    void onDisable()
+    {
+        windSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        windSFX.release();
     }
 
 }

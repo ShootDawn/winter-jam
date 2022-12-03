@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{5e65d27f-d8ae-42eb-9fc4-753bbbc71b21}">
 		<property name="color">
-			<value>Blue</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>WindHumming</value>
@@ -207,7 +207,7 @@
 			<value>-80</value>
 		</property>
 		<property name="curveShape">
-			<value>0.236752793</value>
+			<value>-0.414359003</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{59f45590-bd0f-425e-a794-44f3d7e7e051}">
@@ -243,7 +243,7 @@
 			<value>20</value>
 		</property>
 		<property name="curveShape">
-			<value>1</value>
+			<value>-0.226677194</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b288be19-da0a-4281-a584-e793713514ed}">
