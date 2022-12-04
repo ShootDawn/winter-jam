@@ -1,0 +1,26 @@
+{aae10f5a-2165-4861-8d4d-ecd74f3d6252} bank:/Master
+{32fc2f8e-501e-0423-0b04-6629bece64ca} bank:/Master.strings
+{4640bb8e-8602-42e8-b18a-61b79ed6eca0} bus:/
+{2e0687f2-247a-42ee-898a-152b4089df88} bus:/BGM Group
+{463ff8c5-776a-4b19-91a7-4b44ac5fa6c9} bus:/Reverb
+{c8f51dcf-a096-4af7-bfe5-dc2bc09124e6} bus:/SFX Group
+{1d2fba2f-268f-4328-beee-dec8966d0628} event:/BGM/BGM
+{ff508350-3736-42e0-8b4a-da41cfeb2e53} event:/SFX/Homeless/Pickup
+{fe63db6c-c8d1-4e50-a312-5b173f262c81} event:/SFX/Homeless/Walk
+{e65a3511-7dff-4626-b576-9c25f8a281a6} event:/SFX/LevelSFX/FirePlace
+{4c98d98a-f2a5-4fe0-bfd2-db82442c9ef3} event:/SFX/LevelSFX/HouseUnlock
+{28b6e61b-55a5-477f-86f2-262594c7cd9f} event:/SFX/LevelSFX/HouseUnlockFail
+{94443226-6219-4275-b292-a1403d75ce6e} event:/SFX/LevelSFX/PeopleTalkingInHouses
+{5e65d27f-d8ae-42eb-9fc4-753bbbc71b21} event:/SFX/LevelSFX/WindHumming
+{3f51f03f-0e28-4a4b-afc9-52fc35799ce4} event:/SFX/Menu/Click
+{232cc36b-deee-45ef-a033-0403e628a0aa} event:/SFX/NPC/NPC1Talking
+{6f6afbad-1c8b-42a1-b7be-5118babf8dae} event:/SFX/NPC/NPC2Talking
+{fcec2785-f782-4279-8761-df3d5c5a3bbd} event:/SFX/NPC/NPC3Talking
+{57f116ff-8bc5-49c4-89ab-2c08bdca5336} event:/SFX/NPC/NPC4Talking
+{078453c2-315d-4be9-a6c7-6852a6fc7236} event:/SFX/NPC/NPC5Talking
+{26cdcddb-8836-409f-81db-52da58f71eb4} event:/SFX/NPC/NPC6Talking
+{ee8235ca-e237-4c21-b976-44610fa79765} parameter:/Coldness
+{c7e8c65e-0efe-4fad-ad19-4ab0f462c8a2} parameter:/Corrupted
+{53318c7e-0cc6-4051-803f-10dad981b21a} parameter:/FloorType
+{716bf7a5-ce46-44b4-a0b8-b3eddada4fd0} vca:/BGM VCA
+{db328683-98cf-45f2-b085-c6b2baba7246} vca:/SFX VCA
