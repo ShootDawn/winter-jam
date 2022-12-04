@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerVCA" id="{716bf7a5-ce46-44b4-a0b8-b3eddada4fd0}">
-		<property name="volume">
-			<value>-80</value>
-		</property>
 		<property name="name">
 			<value>BGM VCA</value>
 		</property>
