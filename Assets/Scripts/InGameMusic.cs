@@ -22,4 +22,9 @@ public class InGameMusic : MonoBehaviour
         levelBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         levelBGM.release();
     }
+    void onDestroy()
+    {
+        levelBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        levelBGM.release();
+    }
 }

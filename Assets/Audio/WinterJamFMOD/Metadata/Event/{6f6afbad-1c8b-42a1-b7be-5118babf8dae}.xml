@@ -215,12 +215,13 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>3</value>
+			<value>15</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{45d6906d-2ed1-40fa-8a4b-cf3ab0320e45}">
 		<relationship name="effects">
 			<destination>{8fa83936-272a-4540-a113-87c0850969c0}</destination>
+			<destination>{4845f883-884a-43a2-92da-98cd9b201959}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8d6fdef3-95ff-40b7-895d-081c02176882}" />
@@ -251,6 +252,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{8fa83936-272a-4540-a113-87c0850969c0}" />
+	<object class="GainEffect" id="{4845f883-884a-43a2-92da-98cd9b201959}">
+		<property name="gain">
+			<value>8.5</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{4ab0c232-77a4-4975-8055-71e0edfd1b61}">
 		<relationship name="parameter">
 			<destination>{c7e8c65e-0efe-4fad-ad19-4ab0f462c8a2}</destination>
@@ -274,7 +280,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>7</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{304f43e9-df47-4d1c-9534-514b5ec78330}">
@@ -298,7 +304,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>5.5</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{5b71e9b3-3526-4c88-a362-a6e12e3a3dfc}">

@@ -215,7 +215,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>3</value>
+			<value>9</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{d280dcb7-f057-4ee5-bd00-ee6dee77f7f8}">
@@ -274,7 +274,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>4.5</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{01f390fb-0921-4602-b8ad-9a63745e9129}">
@@ -298,7 +298,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{b926fc0e-6c8d-4349-972f-71c68f6f4216}">

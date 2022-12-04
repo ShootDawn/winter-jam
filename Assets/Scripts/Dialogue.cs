@@ -19,6 +19,8 @@ public class Dialogue : MonoBehaviour
     public House House;
     private FMOD.Studio.EventInstance voiceSFX;
     public int npcNumber = 1;
+    public GameObject exc;
+    public GameObject interrogation;
 
     private int index;
     // Start is called before the first frame update
@@ -74,6 +76,8 @@ public class Dialogue : MonoBehaviour
             {
                 House.Keys++;
                 hasGivenKey = true;
+                exc.SetActive(false);
+                interrogation.SetActive(false);
             }
             StartCoroutine(TypeLine());
         }
@@ -145,7 +149,16 @@ public class Dialogue : MonoBehaviour
          if (collision.CompareTag("Player"))
         {
     inRange = true;
-    }
+    } 
+         //efeito dos pontos
+
+        if (isBlurred && !hasGivenKey)
+        {
+            interrogation.SetActive(true);
+        } else if(!isBlurred && !hasGivenKey)
+        {
+            exc.SetActive(true);
+        } 
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -156,7 +169,9 @@ public class Dialogue : MonoBehaviour
             dialogueBox.SetActive(false);
             inRange = false;
             dialogue = false;
-            
+            exc.SetActive(false);
+            interrogation.SetActive(false);
+
         }
     }
 }

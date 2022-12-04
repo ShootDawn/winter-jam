@@ -227,7 +227,7 @@
 			<value>volume</value>
 		</property>
 		<property name="amount">
-			<value>3</value>
+			<value>8</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{622a6869-91f7-4814-86e4-f1e6fb666e96}">
@@ -374,7 +374,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-5</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{0123f75b-50d3-42f6-ba47-af2a4ea17ad9}">

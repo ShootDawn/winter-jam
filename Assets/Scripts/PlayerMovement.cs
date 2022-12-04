@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,8 +11,11 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRb;
     public bool[] knowledge = new bool[6];
     public Animator animator;
+    
 
     public FMOD.Studio.EventInstance footstepsSFX;
+    public int snow = 0;
+    public InGameMusic musicPlayer;
 
     Vector2 movement;
     private void Start()
@@ -39,9 +43,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement.sqrMagnitude > 0) {
             if (!IsPlaying(footstepsSFX))
-            {
+            {           
                 footstepsSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Homeless/Walk");
                 footstepsSFX.start();
+                footstepsSFX.setParameterByName("FloorType", snow);
             }
 
         } else
@@ -51,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            musicPlayer.levelBGM.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            musicPlayer.levelBGM.release();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
 

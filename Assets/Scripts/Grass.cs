@@ -12,10 +12,14 @@ public class Grass : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player.footstepsSFX.setParameterByName("FloorType", 1);
+            player.snow = 1;
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         player.footstepsSFX.setParameterByName("FloorType", 0);
+        player.snow = 0;
     }
+    
 }
