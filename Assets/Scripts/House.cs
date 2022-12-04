@@ -14,7 +14,7 @@ public class House : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/levelSFX/HouseUnlock");
             Debug.Log("game over");
-            player.transform.position = new Vector2(10, 20);
+            player.transform.position = new Vector2(-56, 162);
         } else if (inRange && Input.GetKeyDown(KeyCode.X) && (Keys < maxKeys))
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/levelSFX/HouseUnlockFail");

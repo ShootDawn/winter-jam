@@ -35,7 +35,7 @@ SpriteAtlas:
       m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
-      padding: 4
+      padding: 8
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 1
@@ -49,6 +49,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 442f00b27a8ccc94ab433935e009a69e, type: 3}
     - {fileID: 2800000, guid: 5d45064d69938fc4c95fe281fe4e9124, type: 3}
     - {fileID: 2800000, guid: 2dd6cf68702464d44a432f882f4bfc08, type: 3}
+    - {fileID: 2800000, guid: 3af6b25cbe792ca439fc24172ff73455, type: 3}
+    - {fileID: 2800000, guid: 346119aae355b1846865a2a5bc060332, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -254,6 +256,18 @@ SpriteAtlas:
   - {fileID: -2062613878, guid: 2dd6cf68702464d44a432f882f4bfc08, type: 3}
   - {fileID: 842384050, guid: 2dd6cf68702464d44a432f882f4bfc08, type: 3}
   - {fileID: -1020474606, guid: 2dd6cf68702464d44a432f882f4bfc08, type: 3}
+  - {fileID: 1491611636, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: -2054963047, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 1497951675, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 1613677705, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 1373498181, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: -843814554, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 1453675986, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 1288479992, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 285603842, guid: 346119aae355b1846865a2a5bc060332, type: 3}
+  - {fileID: 661323575, guid: 3af6b25cbe792ca439fc24172ff73455, type: 3}
+  - {fileID: -1858644450, guid: 3af6b25cbe792ca439fc24172ff73455, type: 3}
+  - {fileID: 1298079303, guid: 3af6b25cbe792ca439fc24172ff73455, type: 3}
   - {fileID: 21300000, guid: 5d45064d69938fc4c95fe281fe4e9124, type: 3}
   - {fileID: -865752845, guid: 02770b8f0c4aa2147bf208686c8e4562, type: 3}
   - {fileID: -1682731707, guid: 02770b8f0c4aa2147bf208686c8e4562, type: 3}
@@ -466,6 +480,18 @@ SpriteAtlas:
   - down1
   - down3
   - down2
+  - casa2_6
+  - casa2_7
+  - casa2_4
+  - casa2_5
+  - casa2_2
+  - casa2_3
+  - casa2_0
+  - casa2_1
+  - casa2_8
+  - casa1_1
+  - casa1_0
+  - casa1_2
   - Home
   - bigtreesnowy
   - trashcan

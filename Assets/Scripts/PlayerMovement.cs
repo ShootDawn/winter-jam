@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -48,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
             footstepsSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             footstepsSFX.release();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+
     }
     void FixedUpdate()
     {
@@ -60,6 +66,17 @@ public class PlayerMovement : MonoBehaviour
         instance.getPlaybackState(out state);
         return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
     }
-
-
+    private void OnDisable()
+    {
+        footstepsSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        footstepsSFX.release();
+    }
+    private void OnDestroy()
+    {
+        footstepsSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        footstepsSFX.release();
+    }
 }
+
+
+

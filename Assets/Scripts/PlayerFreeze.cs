@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerFreeze : MonoBehaviour
 {
@@ -31,7 +32,9 @@ public class PlayerFreeze : MonoBehaviour
 
             } else
         {
-            Debug.Log("you died!");
+                windSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                windSFX.release();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         } else
         {
@@ -47,7 +50,12 @@ public class PlayerFreeze : MonoBehaviour
     }
     void onDisable()
     {
-        windSFX.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        windSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        windSFX.release();
+    }
+    void ondestroy()
+    {
+        windSFX.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         windSFX.release();
     }
 
